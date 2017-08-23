@@ -15,15 +15,8 @@ app.controller('ViewCtrl',function ($firebaseArray,$state,array_service) {
                 vm.fire_array = arr1
 
                 vm.edit_func = function (id) {
-                    /*var data = vm.fire_array[index];
-                    vm.data = data;
-                    array_service.viewData(data)*/
-
                     $state.go('add',{id:id});
-
                     console.log(id);
-
-
                 };
             }).catch(function (err) {
                 console.log("This is error form catch" + err)
