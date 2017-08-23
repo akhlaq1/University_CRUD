@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"  ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="./components/login/login.css" rel="stylesheet" type="text/css"></link>
+    <!-- CSS (load bootstrap) -->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!--<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">-->
+    <script src="./node_modules/angular/angular.min.js"></script>
+    <script src="./node_modules/firebase/firebase.js"></script>
+    <script src="./node_modules/firebase/firebase-app.js"></script>
+    <script src="./node_modules/firebase/firebase-auth.js"></script>
+    <script src="./node_modules/firebase/firebase-database.js"></script>
+
+    <script src="./node_modules/angularfire/dist/angularfire.min.js"></script>
+    <style>
+        .navbar { border-radius:0; }
+    </style>
+
+
+
+    <script src="./node_modules/angular-spinners/dist/angular-spinners.min.js"></script>
+    <script src="./node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="index.js"></script>
+    <script src="./services.js"></script>
+    <script src="components/login/LoginCtrl.js"></script>
+    <script src="components/signup/SignUpCtrl.js"></script>
+    <script src="components/add/AddCtrl.js"></script>
+    <script src="components/view/ViewCtrl.js"></script>
+
+
+</head>
+<body>
+
+<div>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" ui-sref="#">University</a>
+        </div>
+        <ul class="nav navbar-nav">
+
+    <!-- MAIN CONTENT -->
+    <li><a ui-sref="login">Login</a></li>
+    <li><a ui-sref="add">Add</a></li>
+    <li><a ui-sref="view">View</a></li>
+            <li ><button ng-click="vm.signOut_func()">Sign Out</button></li>
+
+    </ul>
+    </nav>
+    <div class="container">
+
+        <!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
+        <div ui-view></div>
+
+    </div>
+
+
+
+
+</div>
+</body>
+</html>

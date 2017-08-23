@@ -1,0 +1,14 @@
+
+
+<div>
+    <table>
+        <tr ng-repeat="data in vm.fire_array track by $index">
+            <td >{{data.userName}}</td>
+            <td >{{data.pass}}</td>
+            <td><button ng-click="vm.edit_func($index)">Edit</button></td>
+            <td><button ng-click="vm.del_func($index)">Remove</button></td>
+        </tr>
+    </table>
+</div>
+
+
